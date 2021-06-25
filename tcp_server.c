@@ -9,7 +9,7 @@
 
 
 int main(){
-    char server_msg[256] = "you have reached to the server!";
+    char server_msg[256] = "you have reached to the server!"; // msg to send
 
     // create a socket
     int server_socket;
@@ -30,7 +30,7 @@ int main(){
     int clint_socket;
     clint_socket = accept(server_socket, NULL,NULL);
 
-    send(clint_socket, server_msg, sizeof(server_msg), 0);
+    send(clint_socket, server_msg, sizeof(server_msg), 0); // sending msg
 
     close(server_socket);
 
